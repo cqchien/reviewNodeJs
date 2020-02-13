@@ -1,6 +1,7 @@
 // Call library used in project.
 const express = require("express");
 const bodyParser = require("body-parser"); // To get data to req.body
+const cookieParser = require("cookie-parser")
 
 var userRoute = require('./routes/user.route')
 
@@ -12,6 +13,7 @@ app.set("views", "./view");
 // Set middlewares
 app.use(bodyParser.json()); // for paresing application/json
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser())
 
 app.use(express.static('public'+ __dirname))
 
