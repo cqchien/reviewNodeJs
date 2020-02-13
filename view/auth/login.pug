@@ -1,0 +1,17 @@
+extend ../layout/common.pug
+
+block content
+  h1 Login
+  if error
+    .alert.alert-danger= error
+  .mt-5
+  form.w-50(action="/auth/login", method="post")
+    .form-group
+      label(for="email") Email
+      input.form-control(type ="text", name = "email", id ="email" value=values.email)
+
+    .form-group
+      label(for="password") Password
+      input.form-control(type ="password", name = "password", id ="password" value=values.password )
+
+    button.btn.btn-primary(type="submit") Login
