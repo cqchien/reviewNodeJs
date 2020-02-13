@@ -1,0 +1,4 @@
+{
+  "_comment:": "To avoid restarting server anytime when you write data in db.json file.",
+  "ignore":["db.json"]
+}

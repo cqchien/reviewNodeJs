@@ -1,0 +1,17 @@
+extend ../layout/common.pug
+
+block content
+  h1 Create new User
+  if error
+    .alert.alert-danger= error
+  .mt-5
+  form.w-50(action="/users/create", method="post")
+    .form-group
+      label(for="name") Name
+      input.form-control(type ="text", name = "name", id ="name" value=values.name)
+
+    .form-group
+      label(for="phone") Phone
+      input.form-control(type ="number", name = "phone", id ="phone" value=values.phone )
+
+    button.btn.btn-primary(type="submit") Add
