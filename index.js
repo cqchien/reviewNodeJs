@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Thanks to modules dotenv, we can use 'process.env'. It used to access to obj has stored all env variables. 
 app.use(cookieParser(process.env.SESSION_SECRET)); 
 
-app.use(express.static("public" + __dirname));
+app.use(express.static('public'));
 
 // Render homepage
 app.get("/", requireAuth, (req, res, next) => {

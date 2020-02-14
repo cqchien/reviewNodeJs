@@ -1,4 +1,4 @@
-module.exports.postCreate = (req, res, next) => {
+module.exports.validateCreate = (req, res, next) => {
   let userDTO = req.body;
   let error = [];
   if (!userDTO.name || !userDTO.phone) {

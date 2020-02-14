@@ -1,26 +1,18 @@
 {
   "users": [
     {
-      "name": "VY",
-      "phone": "0328355321",
-      "id": "6fE8OmWj"
-    },
-    {
       "name": "Cao Chien",
       "phone": "0986579852",
       "email": "18520526@gm.uit.edu.vn",
+      "avatar": "uploads/c8b9762508987ba0bc0eef58754afa91",
       "password": "202cb962ac59075b964b07152d234b70",
       "id": "RHayRayw"
     },
     {
-      "name": "Nguyễn Triều Vĩ",
-      "phone": "0986579852",
-      "id": "AWMf2FCh"
-    },
-    {
-      "name": "Nam",
-      "phone": "09853235521",
-      "id": "Yb76QNJq"
+      "name": "Quang",
+      "phone": "43214213",
+      "id": "e6SelR_G",
+      "avatar": "uploads/f8dc776f97b21ced7450374ee3550690"
     }
   ]
 }

@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const { postCreate } = require("../validate/user.validate");
+const multer = require("multer");
+
+const { validateCreate } = require("../validate/user.validate");
 const {
   renderUser,
   search,
@@ -8,6 +10,8 @@ const {
   viewDetailUser,
   createUser
 } = require("../controller/user.controller");
+
+const upload = multer({ dest: "./public/uploads/" });
 
 // Render page users
 router.get("/", renderUser);
@@ -23,6 +27,6 @@ router.get("/create", renderCreateUser);
 // View detail of user
 router.get("/:userId", viewDetailUser);
 // Create user.
-router.post("/create", postCreate, createUser);
+router.post("/create", upload.single("avatar"), validateCreate, createUser);
 
 module.exports = router;

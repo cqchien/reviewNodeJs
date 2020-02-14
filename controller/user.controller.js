@@ -37,8 +37,8 @@ const viewDetailUser = async (req, res, next) => {
 
 const createUser = async (req, res, next) => {
   let userDTO = req.body;
-  console.log(res.locals)
   userDTO.id = shortid.generate();
+  userDTO.avatar = req.file.path.split('\\').slice(1).join('/')
   users.push(userDTO).write(); // .write() to write again new data to db
   res.redirect("/users");
 };
