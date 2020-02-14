@@ -15,7 +15,7 @@ app.set("views", "./view");
 // Set middlewares
 app.use(bodyParser.json()); // for paresing application/json
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cookieParser());
+app.use(cookieParser('sada'));
 
 app.use(express.static("public" + __dirname));
 

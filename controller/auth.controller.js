@@ -1,6 +1,6 @@
 const db = require("../db");
 const users = db.get("users"); // Get data from db users
-
+const md5 = require("md5"); // JS function to hash message
 const renderLogin = async (req, res, next) => {
   res.render("auth/login", { values: "" });
 };
@@ -15,14 +15,16 @@ const postLogin = async (req, res, next) => {
     });
     return;
   }
-  if (user.password !== password) {
+  const hashedPassword = md5(password);
+  console.log(hashedPassword);
+  if (user.password !== hashedPassword) {
     res.render("auth/login", {
       error: "Password  is wrong",
       values: req.body
     });
     return;
   }
-  res.cookie("authId", user.id);
+  res.cookie("authId", user.id, { signed: true });
   res.redirect("/users");
 };
 module.exports = {
