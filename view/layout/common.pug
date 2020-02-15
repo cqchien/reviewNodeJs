@@ -14,6 +14,12 @@ html
             a.nav-link(href='/') Home
           li.nav-item
             a.nav-link(href='/users') Users
+          li.nav-item
+            a.nav-link(href='/products') Products
+          li.nav-item
+            button.btn.btn-sm.btn-info Cart
+              span &nbsp &nbsp
+              span.badge.badge-light= countCart
       if user
         h2.text-right.badge.badge-info.badge-pill= user.name 
     .container.pt-5

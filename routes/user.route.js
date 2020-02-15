@@ -20,7 +20,7 @@ router.get("/cookie", (req, res, next) => {
   res.cookie("user-id", 12345);
   res.send("Hello");
 });
-// Search Feature
+// Search Name
 router.get("/search", search);
 // Show the template of create featue.
 router.get("/create", renderCreateUser);
